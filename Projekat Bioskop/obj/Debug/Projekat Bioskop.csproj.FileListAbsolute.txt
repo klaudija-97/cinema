@@ -1,0 +1,84 @@
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe.config
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.pdb
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csprojAssemblyReference.cache
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.AdminForm.resources
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijavaForm.resources
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.Properties.Resources.resources
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.RadnikForm.resources
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.GenerateResource.cache
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CoreCompileInputs.cache
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.pdb
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.dll
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.xml
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CopyComplete
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.ProdajaForm.resources
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijaviGreskuForm.resources
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtkaziProjekcijuForm.resources
+C:\Users\laptop\Desktop\Информациони системи\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtpustiRadnikaForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe.config
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.pdb
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.dll
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.xml
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csprojAssemblyReference.cache
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.AdminForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtkaziProjekcijuForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtpustiRadnikaForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijavaForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijaviGreskuForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.ProdajaForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.Properties.Resources.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.RadnikForm.resources
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.GenerateResource.cache
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CoreCompileInputs.cache
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CopyComplete
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.pdb
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe.config
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.pdb
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.dll
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.xml
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csprojAssemblyReference.cache
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.AdminForm.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtkaziProjekcijuForm.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtpustiRadnikaForm.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijavaForm.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijaviGreskuForm.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.ProdajaForm.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.Properties.Resources.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.RadnikForm.resources
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.GenerateResource.cache
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CoreCompileInputs.cache
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CopyComplete
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.pdb
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe.config
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\Projekat Bioskop.pdb
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.dll
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.xml
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csprojAssemblyReference.cache
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.AdminForm.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtkaziProjekcijuForm.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.OtpustiRadnikaForm.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijavaForm.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.PrijaviGreskuForm.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.ProdajaForm.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.Properties.Resources.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat_Bioskop.RadnikForm.resources
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.GenerateResource.cache
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CoreCompileInputs.cache
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.csproj.CopyComplete
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.exe
+C:\Users\laptop\Desktop\ФАКУЛТЕТ\Информациони системи\PROJEKAT 1\Projekat Bioskop\Projekat Bioskop\obj\Debug\Projekat Bioskop.pdb

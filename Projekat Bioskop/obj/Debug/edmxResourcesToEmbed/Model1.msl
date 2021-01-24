@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BIOSKOPModelStoreContainer" CdmEntityContainer="BIOSKOPEntities">
+    <EntitySetMapping Name="FILMOVIs">
+      <EntityTypeMapping TypeName="BIOSKOPModel.FILMOVI">
+        <MappingFragment StoreEntitySet="FILMOVI">
+          <ScalarProperty Name="film_id" ColumnName="film_id" />
+          <ScalarProperty Name="naslov" ColumnName="naslov" />
+          <ScalarProperty Name="zanr" ColumnName="zanr" />
+          <ScalarProperty Name="godina_izdanja" ColumnName="godina_izdanja" />
+          <ScalarProperty Name="trajanje" ColumnName="trajanje" />
+          <ScalarProperty Name="rezija" ColumnName="rezija" />
+          <ScalarProperty Name="scenario" ColumnName="scenario" />
+          <ScalarProperty Name="producent" ColumnName="producent" />
+          <ScalarProperty Name="zemlja" ColumnName="zemlja" />
+          <ScalarProperty Name="jezik" ColumnName="jezik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="BIOSKOPModel.FILMOVI">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="BIOSKOPModel.Store.sp_DodajFilm">
+            <ScalarProperty Name="jezik" ParameterName="jezik" />
+            <ScalarProperty Name="zemlja" ParameterName="zemlja" />
+            <ScalarProperty Name="producent" ParameterName="producent" />
+            <ScalarProperty Name="scenario" ParameterName="scenario" />
+            <ScalarProperty Name="rezija" ParameterName="rezija" />
+            <ScalarProperty Name="trajanje" ParameterName="trajanje" />
+            <ScalarProperty Name="godina_izdanja" ParameterName="godina_izdanja" />
+            <ScalarProperty Name="zanr" ParameterName="zanr" />
+            <ScalarProperty Name="naslov" ParameterName="naslov" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GREŠKE">
+      <EntityTypeMapping TypeName="BIOSKOPModel.GREŠKE">
+        <MappingFragment StoreEntitySet="GREŠKE">
+          <ScalarProperty Name="greska_id" ColumnName="greska_id" />
+          <ScalarProperty Name="opis_greske" ColumnName="opis_greske" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="BIOSKOPModel.GREŠKE">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="BIOSKOPModel.Store.sp_DodajGresku">
+            <ScalarProperty Name="opis_greske" ParameterName="opis_greske" />
+          </InsertFunction>
+          <DeleteFunction FunctionName="BIOSKOPModel.Store.sp_IzbrisiGresku">
+            <ScalarProperty Name="greska_id" ParameterName="id" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KORISNICIs">
+      <EntityTypeMapping TypeName="BIOSKOPModel.KORISNICI">
+        <MappingFragment StoreEntitySet="KORISNICI">
+          <ScalarProperty Name="korisnik_id" ColumnName="korisnik_id" />
+          <ScalarProperty Name="korisnickoIme" ColumnName="korisnickoIme" />
+          <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+          <ScalarProperty Name="tip" ColumnName="tip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="BIOSKOPModel.KORISNICI">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="BIOSKOPModel.Store.sp_DodajKorisnika">
+            <ScalarProperty Name="tip" ParameterName="tip" />
+            <ScalarProperty Name="lozinka" ParameterName="lozinka" />
+            <ScalarProperty Name="korisnickoIme" ParameterName="korisnickoIme" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRIKAZIVANJAs">
+      <EntityTypeMapping TypeName="BIOSKOPModel.PRIKAZIVANJA">
+        <MappingFragment StoreEntitySet="PRIKAZIVANJA">
+          <ScalarProperty Name="prikazivanje_id" ColumnName="prikazivanje_id" />
+          <ScalarProperty Name="id_filma" ColumnName="id_filma" />
+          <ScalarProperty Name="pocetak_prikazivanja" ColumnName="pocetak_prikazivanja" />
+          <ScalarProperty Name="kraj_prikazivanja" ColumnName="kraj_prikazivanja" />
+          <ScalarProperty Name="status_prikazivanja" ColumnName="status_prikazivanja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="BIOSKOPModel.PRIKAZIVANJA">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="BIOSKOPModel.Store.sp_DodajPrikazivanje">
+            <ScalarProperty Name="status_prikazivanja" ParameterName="status_prikazivanja" />
+            <ScalarProperty Name="kraj_prikazivanja" ParameterName="kraj_prikazivanja" />
+            <ScalarProperty Name="pocetak_prikazivanja" ParameterName="pocetak_prikazivanja" />
+            <ScalarProperty Name="id_filma" ParameterName="id_filma" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="BIOSKOPModel.Store.sp_UpdatePrikazivanja">
+            <ScalarProperty Name="prikazivanje_id" ParameterName="id" Version="Current" />
+            <ScalarProperty Name="status_prikazivanja" ParameterName="status_prikazivanja" Version="Current" />
+            <ScalarProperty Name="kraj_prikazivanja" ParameterName="kraj_prikazivanja" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RADNICIs">
+      <EntityTypeMapping TypeName="BIOSKOPModel.RADNICI">
+        <MappingFragment StoreEntitySet="RADNICI">
+          <ScalarProperty Name="radnik_id" ColumnName="radnik_id" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="prezime" ColumnName="prezime" />
+          <ScalarProperty Name="datum_rodjenja" ColumnName="datum_rodjenja" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="datum_zaposlenja" ColumnName="datum_zaposlenja" />
+          <ScalarProperty Name="kraj_zaposlenja" ColumnName="kraj_zaposlenja" />
+          <ScalarProperty Name="id_korisnika" ColumnName="id_korisnika" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="BIOSKOPModel.RADNICI">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="BIOSKOPModel.Store.sp_DodajRadnika">
+            <ScalarProperty Name="id_korisnika" ParameterName="id_korisnika" />
+            <ScalarProperty Name="kraj_zaposlenja" ParameterName="kraj_zaposlenja" />
+            <ScalarProperty Name="datum_zaposlenja" ParameterName="datum_zaposlenja" />
+            <ScalarProperty Name="telefon" ParameterName="telefon" />
+            <ScalarProperty Name="adresa" ParameterName="adresa" />
+            <ScalarProperty Name="datum_rodjenja" ParameterName="datum_rodjenja" />
+            <ScalarProperty Name="prezime" ParameterName="prezime" />
+            <ScalarProperty Name="ime" ParameterName="ime" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="BIOSKOPModel.Store.sp_UpdateRadnici">
+            <ScalarProperty Name="kraj_zaposlenja" ParameterName="kraj_zaposlenja" Version="Current" />
+            <ScalarProperty Name="radnik_id" ParameterName="radnik_id" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROJEKCIJEs">
+      <EntityTypeMapping TypeName="BIOSKOPModel.PROJEKCIJE">
+        <MappingFragment StoreEntitySet="PROJEKCIJE">
+          <ScalarProperty Name="naslov" ColumnName="naslov" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZAPOSLENIs">
+      <EntityTypeMapping TypeName="BIOSKOPModel.ZAPOSLENI">
+        <MappingFragment StoreEntitySet="ZAPOSLENI">
+          <ScalarProperty Name="Radnik" ColumnName="Radnik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_DodajFilm" FunctionName="BIOSKOPModel.Store.sp_DodajFilm" />
+    <FunctionImportMapping FunctionImportName="sp_DodajGresku" FunctionName="BIOSKOPModel.Store.sp_DodajGresku" />
+    <FunctionImportMapping FunctionImportName="sp_DodajKorisnika" FunctionName="BIOSKOPModel.Store.sp_DodajKorisnika" />
+    <FunctionImportMapping FunctionImportName="sp_DodajPrikazivanje" FunctionName="BIOSKOPModel.Store.sp_DodajPrikazivanje" />
+    <FunctionImportMapping FunctionImportName="sp_DodajRadnika" FunctionName="BIOSKOPModel.Store.sp_DodajRadnika" />
+    <FunctionImportMapping FunctionImportName="sp_IzbrisiGresku" FunctionName="BIOSKOPModel.Store.sp_IzbrisiGresku" />
+    <FunctionImportMapping FunctionImportName="sp_UpdatePrikazivanja" FunctionName="BIOSKOPModel.Store.sp_UpdatePrikazivanja" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateRadnici" FunctionName="BIOSKOPModel.Store.sp_UpdateRadnici" />
+    <EntitySetMapping Name="PRODATE_KARTE">
+      <EntityTypeMapping TypeName="BIOSKOPModel.PRODATE_KARTE">
+        <MappingFragment StoreEntitySet="PRODATE_KARTE">
+          <ScalarProperty Name="id_prikazivanja" ColumnName="id_prikazivanja" />
+          <ScalarProperty Name="termin" ColumnName="termin" />
+          <ScalarProperty Name="datum" ColumnName="datum" />
+          <ScalarProperty Name="status_sjedista" ColumnName="status_sjedista" />
+          <ScalarProperty Name="broj_sjedista" ColumnName="broj_sjedista" />
+          <ScalarProperty Name="broj_reda" ColumnName="broj_reda" />
+          <ScalarProperty Name="prostorija" ColumnName="prostorija" />
+          <ScalarProperty Name="karta_id" ColumnName="karta_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="BIOSKOPModel.PRODATE_KARTE">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="BIOSKOPModel.Store.sp_DodajKartu">
+            <ScalarProperty Name="id_prikazivanja" ParameterName="id_prikazivanja" />
+            <ScalarProperty Name="termin" ParameterName="termin" />
+            <ScalarProperty Name="datum" ParameterName="datum" />
+            <ScalarProperty Name="status_sjedista" ParameterName="status_sjedista" />
+            <ScalarProperty Name="broj_sjedista" ParameterName="broj_sjedista" />
+            <ScalarProperty Name="broj_reda" ParameterName="broj_reda" />
+            <ScalarProperty Name="prostorija" ParameterName="prostorija" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

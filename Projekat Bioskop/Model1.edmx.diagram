@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="feb30b7f665b4f73929b59fa81593b67" Name="Diagram1">
+        <EntityTypeShape EntityType="BIOSKOPModel.FILMOVI" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIOSKOPModel.GREŠKE" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIOSKOPModel.KORISNICI" Width="1.5" PointX="2.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIOSKOPModel.PRIKAZIVANJA" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIOSKOPModel.RADNICI" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIOSKOPModel.PROJEKCIJE" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BIOSKOPModel.ZAPOSLENI" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="BIOSKOPModel.FILMOVI_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="BIOSKOPModel.KORISNICI_fk" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BIOSKOPModel.PRODATE_KARTE" Width="1.5" PointX="5.25" PointY="1.125" />
+        <AssociationConnector Association="BIOSKOPModel.PRIKAZIVANJA_fk" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

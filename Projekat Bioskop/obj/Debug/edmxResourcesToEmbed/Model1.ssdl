@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BIOSKOPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FILMOVI">
+    <Key>
+      <PropertyRef Name="film_id" />
+    </Key>
+    <Property Name="film_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naslov" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="zanr" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="godina_izdanja" Type="smallint" Nullable="false" />
+    <Property Name="trajanje" Type="smallint" Nullable="false" />
+    <Property Name="rezija" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="scenario" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="producent" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="zemlja" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="jezik" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GREŠKE">
+    <Key>
+      <PropertyRef Name="greska_id" />
+    </Key>
+    <Property Name="greska_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="opis_greske" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KORISNICI">
+    <Key>
+      <PropertyRef Name="korisnik_id" />
+    </Key>
+    <Property Name="korisnik_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="korisnickoIme" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="lozinka" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tip" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRIKAZIVANJA">
+    <Key>
+      <PropertyRef Name="prikazivanje_id" />
+    </Key>
+    <Property Name="prikazivanje_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_filma" Type="int" Nullable="false" />
+    <Property Name="pocetak_prikazivanja" Type="date" Nullable="false" />
+    <Property Name="kraj_prikazivanja" Type="date" Nullable="false" />
+    <Property Name="status_prikazivanja" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODATE_KARTE">
+    <Key>
+      <PropertyRef Name="karta_id" />
+    </Key>
+    <Property Name="karta_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prostorija" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="broj_reda" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="broj_sjedista" Type="smallint" Nullable="false" />
+    <Property Name="status_sjedista" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="datum" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="termin" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="id_prikazivanja" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RADNICI">
+    <Key>
+      <PropertyRef Name="radnik_id" />
+    </Key>
+    <Property Name="radnik_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ime" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="prezime" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="datum_rodjenja" Type="date" Nullable="false" />
+    <Property Name="adresa" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="telefon" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="datum_zaposlenja" Type="date" Nullable="false" />
+    <Property Name="kraj_zaposlenja" Type="date" />
+    <Property Name="id_korisnika" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BIOSKOP.dbo.PROJEKCIJE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PROJEKCIJE">
+    <Key>
+      <PropertyRef Name="naslov" />
+    </Key>
+    <Property Name="naslov" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BIOSKOP.dbo.ZAPOSLENI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ZAPOSLENI">
+    <Key>
+      <PropertyRef Name="Radnik" />
+    </Key>
+    <Property Name="Radnik" Type="varchar" MaxLength="85" Nullable="false" />
+  </EntityType>
+  <Association Name="FILMOVI_fk">
+    <End Role="FILMOVI" Type="Self.FILMOVI" Multiplicity="1" />
+    <End Role="PRIKAZIVANJA" Type="Self.PRIKAZIVANJA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FILMOVI">
+        <PropertyRef Name="film_id" />
+      </Principal>
+      <Dependent Role="PRIKAZIVANJA">
+        <PropertyRef Name="id_filma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KORISNICI_fk">
+    <End Role="KORISNICI" Type="Self.KORISNICI" Multiplicity="1" />
+    <End Role="RADNICI" Type="Self.RADNICI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KORISNICI">
+        <PropertyRef Name="korisnik_id" />
+      </Principal>
+      <Dependent Role="RADNICI">
+        <PropertyRef Name="id_korisnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRIKAZIVANJA_fk">
+    <End Role="PRIKAZIVANJA" Type="Self.PRIKAZIVANJA" Multiplicity="1" />
+    <End Role="PRODATE_KARTE" Type="Self.PRODATE_KARTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRIKAZIVANJA">
+        <PropertyRef Name="prikazivanje_id" />
+      </Principal>
+      <Dependent Role="PRODATE_KARTE">
+        <PropertyRef Name="id_prikazivanja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_DodajFilm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naslov" Type="varchar" Mode="In" />
+    <Parameter Name="zanr" Type="varchar" Mode="In" />
+    <Parameter Name="godina_izdanja" Type="smallint" Mode="In" />
+    <Parameter Name="trajanje" Type="smallint" Mode="In" />
+    <Parameter Name="rezija" Type="varchar" Mode="In" />
+    <Parameter Name="scenario" Type="varchar" Mode="In" />
+    <Parameter Name="producent" Type="varchar" Mode="In" />
+    <Parameter Name="zemlja" Type="varchar" Mode="In" />
+    <Parameter Name="jezik" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_DodajGresku" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="opis_greske" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_DodajKartu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prostorija" Type="varchar" Mode="In" />
+    <Parameter Name="broj_reda" Type="varchar" Mode="In" />
+    <Parameter Name="broj_sjedista" Type="smallint" Mode="In" />
+    <Parameter Name="status_sjedista" Type="varchar" Mode="In" />
+    <Parameter Name="datum" Type="varchar" Mode="In" />
+    <Parameter Name="termin" Type="varchar" Mode="In" />
+    <Parameter Name="id_prikazivanja" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DodajKorisnika" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="korisnickoIme" Type="varchar" Mode="In" />
+    <Parameter Name="lozinka" Type="varchar" Mode="In" />
+    <Parameter Name="tip" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_DodajPrikazivanje" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_filma" Type="int" Mode="In" />
+    <Parameter Name="pocetak_prikazivanja" Type="date" Mode="In" />
+    <Parameter Name="kraj_prikazivanja" Type="date" Mode="In" />
+    <Parameter Name="status_prikazivanja" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DodajRadnika" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ime" Type="varchar" Mode="In" />
+    <Parameter Name="prezime" Type="varchar" Mode="In" />
+    <Parameter Name="datum_rodjenja" Type="date" Mode="In" />
+    <Parameter Name="adresa" Type="varchar" Mode="In" />
+    <Parameter Name="telefon" Type="varchar" Mode="In" />
+    <Parameter Name="datum_zaposlenja" Type="date" Mode="In" />
+    <Parameter Name="kraj_zaposlenja" Type="date" Mode="In" />
+    <Parameter Name="id_korisnika" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_IzbrisiGresku" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdatePrikazivanja" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="kraj_prikazivanja" Type="date" Mode="In" />
+    <Parameter Name="status_prikazivanja" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateRadnici" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="radnik_id" Type="int" Mode="In" />
+    <Parameter Name="kraj_zaposlenja" Type="date" Mode="In" />
+  </Function>
+  <EntityContainer Name="BIOSKOPModelStoreContainer">
+    <EntitySet Name="FILMOVI" EntityType="Self.FILMOVI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GREŠKE" EntityType="Self.GREŠKE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KORISNICI" EntityType="Self.KORISNICI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRIKAZIVANJA" EntityType="Self.PRIKAZIVANJA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODATE_KARTE" EntityType="Self.PRODATE_KARTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RADNICI" EntityType="Self.RADNICI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROJEKCIJE" EntityType="Self.PROJEKCIJE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PROJEKCIJE].[naslov] AS [naslov]
+    FROM [dbo].[PROJEKCIJE] AS [PROJEKCIJE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ZAPOSLENI" EntityType="Self.ZAPOSLENI" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ZAPOSLENI].[Radnik] AS [Radnik]
+    FROM [dbo].[ZAPOSLENI] AS [ZAPOSLENI]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FILMOVI_fk" Association="Self.FILMOVI_fk">
+      <End Role="FILMOVI" EntitySet="FILMOVI" />
+      <End Role="PRIKAZIVANJA" EntitySet="PRIKAZIVANJA" />
+    </AssociationSet>
+    <AssociationSet Name="KORISNICI_fk" Association="Self.KORISNICI_fk">
+      <End Role="KORISNICI" EntitySet="KORISNICI" />
+      <End Role="RADNICI" EntitySet="RADNICI" />
+    </AssociationSet>
+    <AssociationSet Name="PRIKAZIVANJA_fk" Association="Self.PRIKAZIVANJA_fk">
+      <End Role="PRIKAZIVANJA" EntitySet="PRIKAZIVANJA" />
+      <End Role="PRODATE_KARTE" EntitySet="PRODATE_KARTE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

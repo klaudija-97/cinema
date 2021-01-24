@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BIOSKOPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FILMOVI">
+    <Key>
+      <PropertyRef Name="film_id" />
+    </Key>
+    <Property Name="film_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naslov" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zanr" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="godina_izdanja" Type="Int16" Nullable="false" />
+    <Property Name="trajanje" Type="Int16" Nullable="false" />
+    <Property Name="rezija" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="scenario" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="producent" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zemlja" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="jezik" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PRIKAZIVANJAs" Relationship="Self.FILMOVI_fk" FromRole="FILMOVI" ToRole="PRIKAZIVANJA" />
+  </EntityType>
+  <EntityType Name="GREŠKE">
+    <Key>
+      <PropertyRef Name="greska_id" />
+    </Key>
+    <Property Name="greska_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="opis_greske" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KORISNICI">
+    <Key>
+      <PropertyRef Name="korisnik_id" />
+    </Key>
+    <Property Name="korisnik_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="korisnickoIme" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lozinka" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="RADNICIs" Relationship="Self.KORISNICI_fk" FromRole="KORISNICI" ToRole="RADNICI" />
+  </EntityType>
+  <EntityType Name="PRIKAZIVANJA">
+    <Key>
+      <PropertyRef Name="prikazivanje_id" />
+    </Key>
+    <Property Name="prikazivanje_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_filma" Type="Int32" Nullable="false" />
+    <Property Name="pocetak_prikazivanja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="kraj_prikazivanja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="status_prikazivanja" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FILMOVI" Relationship="Self.FILMOVI_fk" FromRole="PRIKAZIVANJA" ToRole="FILMOVI" />
+    <NavigationProperty Name="PRODATE_KARTE" Relationship="BIOSKOPModel.PRIKAZIVANJA_fk" FromRole="PRIKAZIVANJA" ToRole="PRODATE_KARTE" />
+  </EntityType>
+  <EntityType Name="RADNICI">
+    <Key>
+      <PropertyRef Name="radnik_id" />
+    </Key>
+    <Property Name="radnik_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ime" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prezime" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_rodjenja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="adresa" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefon" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_zaposlenja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="kraj_zaposlenja" Type="DateTime" Precision="0" />
+    <Property Name="id_korisnika" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="KORISNICI" Relationship="Self.KORISNICI_fk" FromRole="RADNICI" ToRole="KORISNICI" />
+  </EntityType>
+  <EntityType Name="PROJEKCIJE">
+    <Key>
+      <PropertyRef Name="naslov" />
+    </Key>
+    <Property Name="naslov" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZAPOSLENI">
+    <Key>
+      <PropertyRef Name="Radnik" />
+    </Key>
+    <Property Name="Radnik" Type="String" MaxLength="85" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FILMOVI_fk">
+    <End Role="FILMOVI" Type="Self.FILMOVI" Multiplicity="1" />
+    <End Role="PRIKAZIVANJA" Type="Self.PRIKAZIVANJA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FILMOVI">
+        <PropertyRef Name="film_id" />
+      </Principal>
+      <Dependent Role="PRIKAZIVANJA">
+        <PropertyRef Name="id_filma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KORISNICI_fk">
+    <End Role="KORISNICI" Type="Self.KORISNICI" Multiplicity="1" />
+    <End Role="RADNICI" Type="Self.RADNICI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KORISNICI">
+        <PropertyRef Name="korisnik_id" />
+      </Principal>
+      <Dependent Role="RADNICI">
+        <PropertyRef Name="id_korisnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BIOSKOPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FILMOVIs" EntityType="Self.FILMOVI" />
+    <EntitySet Name="GREŠKE" EntityType="Self.GREŠKE" />
+    <EntitySet Name="KORISNICIs" EntityType="Self.KORISNICI" />
+    <EntitySet Name="PRIKAZIVANJAs" EntityType="Self.PRIKAZIVANJA" />
+    <EntitySet Name="RADNICIs" EntityType="Self.RADNICI" />
+    <EntitySet Name="PROJEKCIJEs" EntityType="Self.PROJEKCIJE" />
+    <EntitySet Name="ZAPOSLENIs" EntityType="Self.ZAPOSLENI" />
+    <AssociationSet Name="FILMOVI_fk" Association="Self.FILMOVI_fk">
+      <End Role="FILMOVI" EntitySet="FILMOVIs" />
+      <End Role="PRIKAZIVANJA" EntitySet="PRIKAZIVANJAs" />
+    </AssociationSet>
+    <AssociationSet Name="KORISNICI_fk" Association="Self.KORISNICI_fk">
+      <End Role="KORISNICI" EntitySet="KORISNICIs" />
+      <End Role="RADNICI" EntitySet="RADNICIs" />
+    </AssociationSet>
+    <FunctionImport Name="sp_DodajFilm">
+      <Parameter Name="naslov" Mode="In" Type="String" />
+      <Parameter Name="zanr" Mode="In" Type="String" />
+      <Parameter Name="godina_izdanja" Mode="In" Type="Int16" />
+      <Parameter Name="trajanje" Mode="In" Type="Int16" />
+      <Parameter Name="rezija" Mode="In" Type="String" />
+      <Parameter Name="scenario" Mode="In" Type="String" />
+      <Parameter Name="producent" Mode="In" Type="String" />
+      <Parameter Name="zemlja" Mode="In" Type="String" />
+      <Parameter Name="jezik" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DodajGresku">
+      <Parameter Name="opis_greske" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DodajKartu">
+      <Parameter Name="id_prikazivanja" Mode="In" Type="Int32" />
+      <Parameter Name="prostorija" Mode="In" Type="String" />
+      <Parameter Name="broj_reda" Mode="In" Type="String" />
+      <Parameter Name="broj_sjedista" Mode="In" Type="Byte" />
+      <Parameter Name="status_sjedista" Mode="In" Type="String" />
+      <Parameter Name="datum" Mode="In" Type="String" />
+      <Parameter Name="termin" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DodajKorisnika">
+      <Parameter Name="korisnickoIme" Mode="In" Type="String" />
+      <Parameter Name="lozinka" Mode="In" Type="String" />
+      <Parameter Name="tip" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DodajPrikazivanje">
+      <Parameter Name="id_filma" Mode="In" Type="Int32" />
+      <Parameter Name="pocetak_prikazivanja" Mode="In" Type="DateTime" />
+      <Parameter Name="kraj_prikazivanja" Mode="In" Type="DateTime" />
+      <Parameter Name="status_prikazivanja" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DodajRadnika">
+      <Parameter Name="ime" Mode="In" Type="String" />
+      <Parameter Name="prezime" Mode="In" Type="String" />
+      <Parameter Name="datum_rodjenja" Mode="In" Type="DateTime" />
+      <Parameter Name="adresa" Mode="In" Type="String" />
+      <Parameter Name="telefon" Mode="In" Type="String" />
+      <Parameter Name="datum_zaposlenja" Mode="In" Type="DateTime" />
+      <Parameter Name="kraj_zaposlenja" Mode="In" Type="DateTime" />
+      <Parameter Name="id_korisnika" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_IzbrisiGresku">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdatePrikazivanja">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="kraj_prikazivanja" Mode="In" Type="DateTime" />
+      <Parameter Name="status_prikazivanja" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateRadnici">
+      <Parameter Name="radnik_id" Mode="In" Type="Int32" />
+      <Parameter Name="kraj_zaposlenja" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="PRODATE_KARTE" EntityType="BIOSKOPModel.PRODATE_KARTE" />
+    <AssociationSet Name="PRIKAZIVANJA_fk" Association="BIOSKOPModel.PRIKAZIVANJA_fk">
+      <End Role="PRIKAZIVANJA" EntitySet="PRIKAZIVANJAs" />
+      <End Role="PRODATE_KARTE" EntitySet="PRODATE_KARTE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="PRODATE_KARTE">
+    <Key>
+      <PropertyRef Name="karta_id" />
+    </Key>
+    <Property Name="karta_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prostorija" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="broj_reda" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="broj_sjedista" Type="Int16" Nullable="false" />
+    <Property Name="status_sjedista" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="datum" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="termin" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="id_prikazivanja" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PRIKAZIVANJA" Relationship="BIOSKOPModel.PRIKAZIVANJA_fk" FromRole="PRODATE_KARTE" ToRole="PRIKAZIVANJA" />
+  </EntityType>
+  <Association Name="PRIKAZIVANJA_fk">
+    <End Type="BIOSKOPModel.PRIKAZIVANJA" Role="PRIKAZIVANJA" Multiplicity="1" />
+    <End Type="BIOSKOPModel.PRODATE_KARTE" Role="PRODATE_KARTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRIKAZIVANJA">
+        <PropertyRef Name="prikazivanje_id" />
+      </Principal>
+      <Dependent Role="PRODATE_KARTE">
+        <PropertyRef Name="id_prikazivanja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
